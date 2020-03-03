@@ -1,0 +1,219 @@
+<?xml version = "1.0"?>
+<lom xmlns="http://ltsc.ieee.org/xsd/LOM">
+	<general>
+		<identifier>
+			<catalog>ATIA</catalog>
+			<entry>TBD</entry>
+		</identifier>
+		<title>
+			<string language="en">DAC End of Course Survey</string>
+		</title>
+		<description>
+			<string language="en">This survey provides a links to a anonomous questionare/survey to get the student's point of view of what the course is like to complete.</string>
+		</description>
+		<keyword>
+			<string language="en">survey</string>
+		</keyword>
+		<keyword>
+			<string language="en">questionare</string>
+		</keyword>
+		<keyword>
+			<string language="en">feedback</string>
+		</keyword>
+		<keyword>
+			<string language="en">help</string>
+		</keyword>
+		<coverage>
+            <string language='en-us'>All DAC stakeholders to provide anonomous feedback about how well this course was for them to complete.</string>
+        </coverage>
+        <structure>
+            <source>LOMv1.0</source>
+            <value>hierarchical</value>
+        </structure>
+        <aggregationLevel>
+            <source>LOMv1.0</source>
+            <value>1</value>
+        </aggregationLevel>
+	</general>
+	<lifeCycle>
+		<version>
+			<string language="en">1.0</string>
+		</version>
+		<status>
+			<source>LOMv1.0</source>
+			<value>final</value>
+		</status>
+		<contribute>
+		  <role>
+			<source>LOMv1.0</source>
+			<value>technical implementer</value>
+		  </role>
+		  <entity><![CDATA[BEGIN:VCARD
+	VERSION:2.1
+	N:Jackman;Anthony
+	FN:Anthony Jackman
+	ORG:Serco Inc;Serco Operations
+	TITLE:Software Engineer II
+	TEL;WORK;VOICE:405-455-2258
+	TEL;WORK;FAX:(405) 455-7673
+	ADR;WORK;PREF:;OK01 - Oklahoma City;8001 Mid America Blvd, Ste 250;Oklahoma City;OK;73135
+	LABEL;WORK;PREF;ENCODING=QUOTED-PRINTABLE:8001 Mid America Blvd, Ste 250 Oklahoma City, OK  73135
+	X-MS-OL-DEFAULT-POSTAL-ADDRESS:2
+	EMAIL;PREF;INTERNET:anthony.jackman@serco-na.com
+	EMAIL;INTERNET:anthony.q.jackman.ctr@mail.mil
+	X-MS-MANAGER:Wong, Mike
+	REV:20170101T120000Z
+	END:VCARD]]></entity>
+		  <date>
+			<dateTime>2017-06-22</dateTime>
+			<description>
+			  <string language="en-US">The date the content was last updated by this contributor.</string>
+			</description>
+		  </date>
+		</contribute>
+	</lifeCycle>
+	<metaMetadata>
+		<identifier>
+			<catalog>TBD</catalog>
+			<entry>TBD</entry>
+		</identifier>
+		<metadataSchema>LOMv1.0</metadataSchema>
+		<metadataSchema>SCORM_CAM_V1.3</metadataSchema>
+		<metadataSchema>ADLv1.0</metadataSchema>
+		<language>en-us</language>
+		<contribute>
+            <role>
+                <source>LOMv1.0</source>
+                <value>creator</value>
+			</role>
+                <entity><![CDATA[BEGIN:VCARD
+	VERSION:2.1
+	N:Jackman;Anthony
+	FN:Jackman, Anthony
+	ORG:Serco North America;Federal &amp; Civilian Services
+	TITLE:Software Engineer II
+	TEL;WORK;VOICE:(405) 455-2258
+	TEL;WORK;FAX:(405) 455-7673
+	ADR;WORK;PREF:;;8001 Mid America Blvd., Suite 250;Oklahoma City;OK;73135;United States of America
+	LABEL;WORK;PREF;ENCODING=QUOTED-PRINTABLE:8001 Mid America Blvd., Suite 250=0D=0A=
+	Oklahoma City, OK 73135
+	X-MS-OL-DEFAULT-POSTAL-ADDRESS:2
+	EMAIL;PREF;INTERNET:anthony.jackman@serco-na.com
+	EMAIL;INTERNET:anthony.q.jackman.ctr@mail.mil
+	X-MS-MANAGER:Wong, Mike
+	REV:20161118T120000Z
+	END:VCARD]]></entity>
+            <date>
+                <dateTime>2017-06-22</dateTime>
+                <description>
+                    <string language="en-US">UPDATED technical element section.</string>
+                </description>
+            </date>
+        </contribute>
+	</metaMetadata>
+	<technical>
+		<format>text/html</format>
+		<format>application/javascript</format>
+		<format>text/css</format>
+		<format>image/png</format>
+		<location>./survey.html</location>
+		<size>491520</size>
+		<requirement>
+		  <orComposite>
+			<type>
+			  <source>LOMv1.0</source>
+			  <value>browser</value>
+			</type>
+			<name>
+			  <source>LOMv1.0</source>
+			  <value>ms-internet explorer</value>
+			</name>
+			<minimumVersion>9</minimumVersion>
+			<maximumVersion>11</maximumVersion>
+		  </orComposite>
+		</requirement>
+		<installationRemarks>
+			<string language="en-US">This course requires the student's computer to have Internet Explorer with javascript enabled to properly play the course.</string>
+		</installationRemarks>
+		<otherPlatformRequirements>
+			<string language="en-US">A screen resolution of 1055 X 755 is required to properly play the course.</string>
+		</otherPlatformRequirements>
+	</technical>
+	<educational>
+        <interactivityType>
+            <source>LOMv1.0</source>
+            <value>expositive</value>
+        </interactivityType>
+        <learningResourceType>
+            <source>LOMv1.0</source>
+            <value>lecture</value>
+        </learningResourceType>
+        <interactivityLevel>
+            <source>LOMv1.0</source>
+            <value>low</value>
+        </interactivityLevel>
+        <semanticDensity>
+            <source>LOMv1.0</source>
+            <value>low</value>
+        </semanticDensity>
+        <intendedEndUserRole>
+            <source>LOMv1.0</source>
+            <value>learner</value>
+        </intendedEndUserRole>
+        <context>
+            <source>LOMv1.0</source>
+            <value>higher education</value>
+        </context>
+        <typicalAgeRange>
+            <string language="en-us">18-90</string>
+        </typicalAgeRange>
+        <difficulty>
+            <source>LOMv1.0</source>
+            <value>very easy</value>
+        </difficulty>
+        <typicalLearningTime>
+            <duration>PT00H15M00S</duration>
+            <description>
+                <string language="en">Academic Training Hours (Distance Learning)</string>
+            </description>
+        </typicalLearningTime>
+        <description>
+            <string language='en-us'>This survey provides a links to a anonomous questionare/survey to get the student's point of view of what the course is like to complete.</string>
+        </description>
+        <language>en-us</language>
+    </educational>
+	<rights>
+		<cost>
+			<source>LOMv1.0</source>
+			<value>no</value>
+		</cost>
+		<copyrightAndOtherRestrictions>
+			<source>LOMv1.0</source>
+			<value>no</value>
+		</copyrightAndOtherRestrictions>
+	</rights>
+	<classification>
+		<purpose>
+			<source>LOMv1.0</source>
+			<value>prerequisite</value>
+		</purpose>
+		<description>
+			<string language="en">None.</string>
+		</description>
+		<keyword>
+			<string language="en">No prerequisite</string>
+		</keyword>
+	</classification>
+	<classification>
+		<purpose>
+			<source>LOMv1.0</source>
+			<value>security level</value>
+		</purpose>
+		<description>
+			<string language="en">None.</string>
+		</description>
+		<keyword>
+			<string language="en">none</string>
+		</keyword>
+	</classification>
+</lom>

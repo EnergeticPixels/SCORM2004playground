@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<manifest identifier="serco_scorm" version="1.3" xmlns="http://www.imsglobal.org/xsd/imscp_v1p1" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_v1p3" xmlns:imsss="http://www.imsglobal.org/xsd/imsss" xmlns:adlseq="http://www.adlnet.org/xsd/adlseq_v1p3" xmlns:adlnav="http://www.adlnet.org/xsd/adlnav_v1p3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 imscp_v1p1.xsd http://www.adlnet.org/xsd/adlcp_v1p3 adlcp_v1p3.xsd http://www.imsglobal.org/xsd/imsss imsss_v1p0.xsd http://www.adlnet.org/xsd/adlnav_v1p3 adlnav_v1p3.xsd http://www.adlnet.org/xsd/adlseq_v1p3 adlseq_v1p3.xsd" >
+	<metadata>
+		<schema>ADL SCORM</schema>
+		<schemaversion>2004 3rd Edition</schemaversion>
+		<adlcp:location>course_metadata.xml</adlcp:location>
+	</metadata>
+
+	<organizations default="serco_scorm-lessons-org">
+		<organization identifier="serco_scorm-lessons-org" adlseq:objectivesGlobalToSystem='false'>
+      <title>TONYZ sequencing mess</title>
+      <!--  Add a dummy wrapper item around all content. Make it invisible so it doesn't affect the user. Since the top level course has only this one child, the status for the course as a whole will be dependent on this dummy item. -->
+      <item identifier='course_wrapper' isvisible='false'>
+        <title>Course Wrapper</title>
+
+        <item identifier="loi" identifierref="loi_sco" isvisible="true">
+          <title>Course Introduction</title>
+          <imsss:sequencing>
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="loi_satisfied" satisfiedByMeasure="false">
+                <imsss:mapInfo targetObjectiveID="serco_scorm.loi_completed" writeSatisfiedStatus="true"/>
+              </imsss:primaryObjective>
+            </imsss:objectives>
+            <imsss:deliveryControls completionSetByContent='true' objectiveSetByContent='true' />
+          </imsss:sequencing>
+        </item>
+
+        <item identifier="survey" identifierref="survey_sco" isvisible="true">
+          <title>Introduction to Preservation and Packaging</title>
+          <imsss:sequencing>
+            <imsss:rollupRules objectiveMeasureWeight="0" />
+            <imsss:objectives>
+              <!-- Write this objective's satisfaction status to a global that we can use as a prerequisite for accessing the post test. -->
+              <imsss:primaryObjective objectiveID="survey_satisfied" satisfiedByMeasure="false">
+                <imsss:mapInfo targetObjectiveID="serco_scorm.survey_completed" writeSatisfiedStatus="true"/>
+              </imsss:primaryObjective>
+            </imsss:objectives>
+            <imsss:deliveryControls completionSetByContent="true" objectiveSetByContent="true" />
+          </imsss:sequencing>
+        </item>
+      </item>
+		</organization>
+	</organizations>
+
+  <resources>
+    <resource identifier="loi_sco" type="webcontent" adlcp:scormType="sco" href="LESSONS/1/loi.html">
+      <file href="LESSONS/1/loi.html"/>
+			<file href="LESSONS/1/shared/scormfunctions.js"/>
+      <file href="LESSONS/1/common/anyElement.xsd" />
+			<file href="LESSONS/1/common/dataTypes.xsd" />
+			<file href="LESSONS/1/common/elementNames.xsd" />
+			<file href="LESSONS/1/common/elementTypes.xsd" />
+			<file href="LESSONS/1/common/rootElement.xsd" />
+			<file href="LESSONS/1/common/vocabTypes.xsd" />
+			<file href="LESSONS/1/common/vocabValues.xsd" />
+			<file href="LESSONS/1/extend/custom.xsd" />
+			<file href="LESSONS/1/extend/strict.xsd" />
+			<file href="LESSONS/1/unique/loose.xsd" />
+			<file href="LESSONS/1/unique/strict.xsd" />
+			<file href="LESSONS/1/vocab/custom.xsd" />
+			<file href="LESSONS/1/vocab/loose.xsd" />
+			<file href="LESSONS/1/vocab/strict.xsd" />
+			<file href="LESSONS/1/dtd/IMS_METADATAv1p1.dtd" />
+			<file href="LESSONS/1/dtd/scormcsf(1.1).dtd" />
+			<file href="LESSONS/1/adlcp_v1p3.xsd" />
+			<file href="LESSONS/1/adlnav_v1p3.xsd" />
+			<file href='LESSONS/1/adlseq_v1p3.xsd' />
+			<file href="LESSONS/1/ims_xml.xsd" />
+			<file href="LESSONS/1/imscp_v1p1.xsd" />
+			<file href="LESSONS/1/imsmanifest.xml" />
+			<file href="LESSONS/1/imsmd_rootv1p2p1.xsd" />
+			<file href="LESSONS/1/imsss_v1p0.xsd" />
+			<file href="LESSONS/1/imsss_v1p0auxresource.xsd" />
+			<file href="LESSONS/1/imsss_v1p0control.xsd" />
+			<file href="LESSONS/1/imsss_v1p0delivery.xsd" />
+			<file href="LESSONS/1/imsss_v1p0limit.xsd" />
+			<file href="LESSONS/1/imsss_v1p0objective.xsd" />
+			<file href="LESSONS/1/imsss_v1p0random.xsd" />
+			<file href="LESSONS/1/imsss_v1p0rollup.xsd" />
+			<file href="LESSONS/1/imsss_v1p0seqrule.xsd" />
+			<file href="LESSONS/1/imsss_v1p0util.xsd" />
+			<file href='LESSONS/1/datatypes.dtd' />
+			<file href='LESSONS/1/lom.xsd' />
+			<file href='LESSONS/1/xml.xsd' />
+			<file href='LESSONS/1/XMLSchema.dtd' />
+    </resource>
+
+    <resource identifier="survey_sco" type="webcontent" adlcp:scormType="sco" href="LESSONS/2/survey.html">
+      <file href="LESSONS/2/survey.html"/>
+			<file href="LESSONS/2/shared/scormfunctions.js"/>
+			<file href="LESSONS/2/shared/daclogo.png" />
+      <file href="LESSONS/2/shared/scormfunctions.js"/>
+      <file href="LESSONS/2/common/anyElement.xsd" />
+			<file href="LESSONS/2/common/dataTypes.xsd" />
+			<file href="LESSONS/2/common/elementNames.xsd" />
+			<file href="LESSONS/2/common/elementTypes.xsd" />
+			<file href="LESSONS/2/common/rootElement.xsd" />
+			<file href="LESSONS/2/common/vocabTypes.xsd" />
+			<file href="LESSONS/2/common/vocabValues.xsd" />
+			<file href="LESSONS/2/extend/custom.xsd" />
+			<file href="LESSONS/2/extend/strict.xsd" />
+			<file href="LESSONS/2/unique/loose.xsd" />
+			<file href="LESSONS/2/unique/strict.xsd" />
+			<file href="LESSONS/2/vocab/custom.xsd" />
+			<file href="LESSONS/2/vocab/loose.xsd" />
+			<file href="LESSONS/2/vocab/strict.xsd" />
+			<file href="LESSONS/2/dtd/IMS_METADATAv1p1.dtd" />
+			<file href="LESSONS/2/dtd/scormcsf(1.1).dtd" />
+			<file href="LESSONS/2/adlcp_v1p3.xsd" />
+			<file href="LESSONS/2/adlnav_v1p3.xsd" />
+			<file href='LESSONS/2/adlseq_v1p3.xsd' />
+			<file href="LESSONS/2/ims_xml.xsd" />
+			<file href="LESSONS/2/imscp_v1p1.xsd" />
+			<file href="LESSONS/2/imsmanifest.xml" />
+			<file href="LESSONS/2/imsmd_rootv1p2p1.xsd" />
+			<file href="LESSONS/2/imsss_v1p0.xsd" />
+			<file href="LESSONS/2/imsss_v1p0auxresource.xsd" />
+			<file href="LESSONS/2/imsss_v1p0control.xsd" />
+			<file href="LESSONS/2/imsss_v1p0delivery.xsd" />
+			<file href="LESSONS/2/imsss_v1p0limit.xsd" />
+			<file href="LESSONS/2/imsss_v1p0objective.xsd" />
+			<file href="LESSONS/2/imsss_v1p0random.xsd" />
+			<file href="LESSONS/2/imsss_v1p0rollup.xsd" />
+			<file href="LESSONS/2/imsss_v1p0seqrule.xsd" />
+			<file href="LESSONS/2/imsss_v1p0util.xsd" />
+			<file href='LESSONS/2/datatypes.dtd' />
+			<file href='LESSONS/2/lom.xsd' />
+			<file href='LESSONS/2/xml.xsd' />
+			<file href='LESSONS/2/XMLSchema.dtd' />
+		</resource>
+
+    <resource identifier="S_SCORMcompliance" type="webcontent" adlcp:scormType="asset">
+			<file href="LESSONS/1/imsmanifest.xml" />
+      <file href="LESSONS/2/imsmanifest.xml" />
+      <file href="LESSONS/1/course_metadata.xml" />
+      <file href="LESSONS/2/course_metadata.xml" />
+      <file href="adlcp_v1p3.xsd" />
+			<file href="adlnav_v1p3.xsd" />
+			<file href='adlseq_v1p3.xsd' />
+      <file href="ims_xml.xsd" />
+			<file href="imscp_v1p1.xsd" />
+      <file href="imsmanifest.xml" />
+			<file href="imsmd_rootv1p2p1.xsd" />
+			<file href="imsss_v1p0.xsd" />
+			<file href="imsss_v1p0auxresource.xsd" />
+			<file href="imsss_v1p0control.xsd" />
+			<file href="imsss_v1p0delivery.xsd" />
+			<file href="imsss_v1p0limit.xsd" />
+			<file href="imsss_v1p0objective.xsd" />
+			<file href="imsss_v1p0random.xsd" />
+			<file href="imsss_v1p0rollup.xsd" />
+			<file href="imsss_v1p0seqrule.xsd" />
+			<file href="imsss_v1p0util.xsd" />
+      <file href='common/anyElement.xsd' />
+			<file href="common/dataTypes.xsd" />
+			<file href="common/elementNames.xsd" />
+			<file href="common/elementTypes.xsd" />
+			<file href="common/rootElement.xsd" />
+			<file href="common/vocabTypes.xsd" />
+			<file href="common/vocabValues.xsd" />
+			<file href="extend/custom.xsd" />
+			<file href="extend/strict.xsd" />
+			<file href="unique/loose.xsd" />
+			<file href="unique/strict.xsd" />
+			<file href="vocab/custom.xsd" />
+			<file href="vocab/loose.xsd" />
+			<file href="vocab/strict.xsd" />
+			<file href="dtd/IMS_METADATAv1p1.dtd" />
+			<file href="dtd/scormcsf(1.1).dtd" />
+		</resource>
+  </resources>
+
+</manifest>
